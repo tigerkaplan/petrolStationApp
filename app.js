@@ -31,27 +31,106 @@ let fuelCostLiter = Number(prompt("Please, enter liter"));
 let balance = Number(prompt("Please, enter your balance"));
 //cost
 
+// ********* Diesel *********
 if (fuelType == "1") {
   // Diesel
-  let fuelCost = diesel * fuelCostLiter;
-  if (fuelCost < balance) {
+  let fuelCostDiesel = diesel * fuelCostLiter;
+  if (fuelCostDiesel < balance) {
     //sufficient amount
-    change = balance - fuelCost
-    alert ("Successful transition"+newLine
-    + "Fuel Cost: " + fuelCost + newLine
-    + "Change : " + change + newLine
-    + "Thank you for payment");
-
-  } if (fuelCost > balance) {
+    change = balance - fuelCostDiesel;
+    alert(
+      "Successful transition" +
+        newLine +
+        "Fuel Cost: " +
+        fuelCostDiesel +
+        newLine +
+        "Change : " +
+        change +
+        newLine +
+        "Thank you for payment"
+    );
+  }
+  if (fuelCostDiesel > balance) {
     // insufficient amount
-    alert ("Insufficient amount." + newLine
-    + "Fuel Cost: " + fuelCost +newLine
-    + "Balance : " + balance+newLine
-    + "Missing Balance : " + (fuelCost - balance) + newLine);
-  } 
+    alert(
+      "Insufficient amount" +
+        newLine +
+        "Fuel Cost: " +
+        fuelCostDiesel +
+        newLine +
+        "Balance : " +
+        balance +
+        newLine +
+        "Missing Amount : " +
+        (fuelCostDiesel - balance) +
+        newLine
+    );
+  }
+
+  // ********* Petrol *********
 } else if (fuelType == "2") {
   // Petrol
-  
+
+  // Sufficient Amount
+
+  let fuelCostPetrol = petrol * fuelCostLiter;
+  if (fuelCostPetrol < balance) {
+    alert(
+      "Successful transition" +
+        newLine +
+        "Fuel Cost Petrol:" +
+        fuelCostPetrol +
+        newLine +
+        "Change :" +
+        fuelCostPetrol +
+        newLine +
+        "Thank you for payment"
+    );
+  }
+
+  if (fuelCostPetrol > balance) {
+    // Insufficient Amount
+    alert(
+      "Insufficient Amount" +
+        newLine +
+        "Fuel Cost Petrol:" +
+        fuelCostPetrol +
+        newLine +
+        "Balance :" +
+        balance +
+        newLine +
+        "Missing Amount:" +
+        (fuelCostPetrol - balance) +
+        newLine
+    );
+  }
+
+  // ********* LPG *********
 } else if (fuelType == "3") {
   // Lpg
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 } else "Please, enter your fuel type";
