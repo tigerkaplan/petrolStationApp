@@ -17,4 +17,13 @@ const chosenFuel = "1- Diesel" + newLine + "2- Petrol" + newLine + "3- Lpg" + ne
 
 // Prompt for choose fuel type
 
-prompt(chosenFuel);
+let fuelType = prompt(chosenFuel);
+
+if (fuelType == "1") {
+    // Diesel
+} else if (fuelType == "2") {
+    // Petrol
+} else if (fuelType == "3") {
+    // Lpg
+} else ( "Please, enter your fuel type");
+
