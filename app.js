@@ -11,3 +11,10 @@ Lpg    : 0.50
 // variations for fuel type
 
 let diesel = 154.4, petrol = 144.6, lpg = 0.50;
+const newLine = "\r\n";
+
+const chosenFuel = "1- Diesel" + newLine + "2- Petrol" + newLine + "3- Lpg" + newLine + "Please, choose your fuel type";
+
+// Prompt for choose fuel type
+
+prompt(chosenFuel);
