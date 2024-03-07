@@ -34,9 +34,12 @@ let balance = Number(prompt("Please, enter your balance"));
 // ********* Diesel *********
 if (fuelType == "1") {
   // Diesel
+
   let fuelCostDiesel = diesel * fuelCostLiter;
+
+  // Sufficient Amount
+
   if (fuelCostDiesel < balance) {
-    //sufficient amount
     change = balance - fuelCostDiesel;
     alert(
       "Successful transition" +
@@ -50,8 +53,10 @@ if (fuelType == "1") {
         "Thank you for payment"
     );
   }
+
+  // Insufficient Amount
+
   if (fuelCostDiesel > balance) {
-    // insufficient amount
     alert(
       "Insufficient amount" +
         newLine +
@@ -71,32 +76,34 @@ if (fuelType == "1") {
 } else if (fuelType == "2") {
   // Petrol
 
+  let fuelCostPetrol = petrol * fuelCostLiter;
+
   // Sufficient Amount
 
-  let fuelCostPetrol = petrol * fuelCostLiter;
   if (fuelCostPetrol < balance) {
+    change = balance - fuelCostPetrol;
     alert(
       "Successful transition" +
         newLine +
         "Fuel Cost Petrol:" +
         fuelCostPetrol +
         newLine +
-        "Change :" +
-        fuelCostPetrol +
+        "Change:" +
+        change +
         newLine +
         "Thank you for payment"
     );
   }
+  // Insufficient Amount
 
   if (fuelCostPetrol > balance) {
-    // Insufficient Amount
     alert(
       "Insufficient Amount" +
         newLine +
         "Fuel Cost Petrol:" +
         fuelCostPetrol +
         newLine +
-        "Balance :" +
+        "Balance:" +
         balance +
         newLine +
         "Missing Amount:" +
@@ -109,28 +116,40 @@ if (fuelType == "1") {
 } else if (fuelType == "3") {
   // Lpg
 
+  let fuelCostLpg = lpg * fuelCostLiter;
 
+  // Sufficient Amount
 
+  if (fuelCostLpg < balance) {
+    change = balance - fuelCostLpg;
+    alert(
+      "Successful transition" +
+        newLine +
+        "Fuel Cost Lpg:" +
+        fuelCostLpg +
+        newLine +
+        "Change:" +
+        change +
+        newLine +
+        "Thank you for payment"
+    );
+  }
 
+  // Insufficient Amount
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  if (fuelCostLpg > balance) {
+    alert(
+      "Insufficient Amount" +
+        newLine +
+        "Fuel Cost Lpg:" +
+        fuelCostLpg +
+        newLine +
+        "Balance:" +
+        balance +
+        newLine +
+        "Missing Amount:" +
+        (fuelCostLpg - balance) +
+        newLine
+    );
+  }
 } else "Please, enter your fuel type";
